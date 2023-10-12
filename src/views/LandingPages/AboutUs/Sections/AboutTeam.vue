@@ -14,8 +14,8 @@ import linkedin from "@/assets/img/linkedin.png";
 
 <template>
   
-  <div style="padding-left: 200px;">
-    <section class="pb-5 position-relative bg-gradient-dark mx-n3" style="width: 100rem;">
+  <div>
+    <section class="pb-5 position-relative bg-gradient-dark mx-n3">
     <div class="container">
       <div class="row">
         <div class="col-md-8 text-start mb-5 mt-5">
@@ -38,7 +38,7 @@ import linkedin from "@/assets/img/linkedin.png";
             class="mt-lg-4 mt-5"
             :image="cem"
             :profile="{ name: 'Mustafa Cem Gülümser', link: 'https://www.linkedin.com/in/cem-g%C3%BCl%C3%BCmser-2b685a213/' }"
-            :position="{ label: 'Frontend Developer'}"
+            :position="{ label: 'Full-stack Developer'}"
 
           />
         </div>

@@ -78,12 +78,12 @@ onUnmounted(() => {
       loading="lazy"
     >
       <span class="mask bg-gradient-dark"></span>
-      <div class="container" style="width: 100rem; height: 25rem">
+      <div class="container" style="width: 100rem; height: 30rem">
         <div class="row">
           <div class="d-flex justify-content-center p-5">
             <div class="col-lg-8 ms-lg-5 text-center">
               <h3 class="text-white">About the Project</h3>
-              <p class="text-white text-md" style="font-size: 100px;">
+              <h3 class="text-white" style="font-size: 22px; color: aliceblue;">
                 We need to remain impartial right? Impartial will obtain and
                 categorize news from various sources so that people can view the
                 articles they want from the perspective they choose. But
@@ -95,7 +95,7 @@ onUnmounted(() => {
                 Impartial’s vision is to foster a more balanced, informative,
                 and nuanced media landscape, bridging ideological gaps, and
                 encouraging a richer understanding of the world's issues
-              </p>
+              </h3>
             </div>
           </div>
         </div>
