@@ -26,13 +26,13 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <navbar-default
-      :action="{
-      route: 'javascript:;',
-      label: 'Buy Now',
-      color: 'btn-white',
-    }"
-  />
+  <div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+      <div class="col-12">
+        <NavbarDefault transparent dark :sticky="true" />
+      </div>
+    </div>
+  </div>
   <Header>
     <div
       class="page-header min-vh-85"
@@ -90,7 +90,7 @@ onUnmounted(() => {
           <div class="d-flex justify-content-center p-5">
             <div class="col-lg-8 ms-lg-5 text-center">
               <h3 class="text-white" style="fontFamily: 'Bebas Neue'">About the Project</h3>
-              <p class="about-project text-white font text-justify " style="fontFamily: 'Bebas Neue'; text-align-last: center;" >
+              <p id="scroll1" class="about-project text-white font text-justify " style="fontFamily: 'Bebas Neue'; text-align-last: center;" >
                 We need to remain impartial right? Impartial will obtain and
                 categorize news from various sources so that people can view the
                 articles they want from the perspective they choose. But
@@ -115,8 +115,9 @@ onUnmounted(() => {
   >
     <div class="container" style="padding-bottom: 50px">
       <div class="row">
-        <div class="col-lg-4" style="">
+        <div class="col-lg-4" style="" >
           <FilledInfoCard
+
             style="height: 12rem; border: 4px solid gray"
             class="px-lg-1 mt-lg-0 mt-4 p-4"
             :icon="{ component: 'receipt_long' }"
@@ -153,7 +154,7 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container" >
       <div class="row">
         <div class="d-flex flex-column w-100 text-center p-4 mb-4">
           <h3>Project's GitHub Link</h3>
@@ -177,8 +178,8 @@ onUnmounted(() => {
       </div>
     </div>
     <div>
-      <AboutTeam></AboutTeam>
+      <AboutTeam id="scroll2"></AboutTeam>
     </div>
   </div>
-  <DefaultFooter />
+  <DefaultFooter id="scroll3"/>
 </template>
