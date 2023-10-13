@@ -1,10 +1,9 @@
 <script setup>
-import { ref, watch } from "vue";
+import { ref } from "vue";
 import { useWindowsWidth } from "../../assets/js/useWindowsWidth";
 
 // images
 import ArrDark from "@/assets/img/down-arrow-dark.svg";
-import downArrow from "@/assets/img/down-arrow.svg";
 import DownArrWhite from "@/assets/img/down-arrow-white.svg";
 
 const props = defineProps({
@@ -153,17 +152,17 @@ if (type.value === "mobile") {
               role="button"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
               :class="getTextColor()"
-              id="dropdownMenuBlocks"
+              id="dropdownMenuDocs"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              @click="scroll('scroll3')"
+              @click="scroll('scroll2')"
             >
               <i
                 class="material-icons opacity-6 me-2 text-md"
                 :class="getTextColor()"
-                >person</i
+                >article</i
               >
-              Team
+              Docs
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
@@ -181,17 +180,17 @@ if (type.value === "mobile") {
               role="button"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
               :class="getTextColor()"
-              id="dropdownMenuDocs"
+              id="dropdownMenuBlocks"
               data-bs-toggle="dropdown"
               aria-expanded="false"
-              @click="scroll('scroll2')"
+              @click="scroll('scroll3')"
             >
               <i
                 class="material-icons opacity-6 me-2 text-md"
                 :class="getTextColor()"
-                >article</i
+              >person</i
               >
-              Docs
+              Team
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
