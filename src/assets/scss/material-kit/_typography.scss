@@ -125,6 +125,16 @@ p, .p {
   @include font-size($font-size-xxs !important);
 }
 
+.about-project {
+  font-size: 13px;
+  @media (min-width: 600px) {
+    font-size: 15px;
+  }
+  @media (min-width: 800px) {
+    font-size: 20px ;
+  }
+}
+
 p {
   line-height: 1.625;
   font-weight: $font-weight-light;

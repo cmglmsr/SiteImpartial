@@ -9649,7 +9649,7 @@ textarea.form-control-lg {
   color: #344767 !important;
 }
 
-.text-white {
+text-white {
   color: #fff !important;
 }
 
@@ -21799,6 +21799,7 @@ p, .p {
 p {
   line-height: 1.625;
   font-weight: 300;
+  col
 }
 
 .text-sans-serif {
