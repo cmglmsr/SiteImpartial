@@ -26,6 +26,13 @@ onUnmounted(() => {
 </script>
 
 <template>
+  <navbar-default
+      :action="{
+      route: 'javascript:;',
+      label: 'Buy Now',
+      color: 'btn-white',
+    }"
+  />
   <Header>
     <div
       class="page-header min-vh-85"
@@ -148,7 +155,7 @@ onUnmounted(() => {
     </div>
     <div class="container">
       <div class="row">
-        <div class="d-flex flex-column w-100 text-center p-5 mb-8">
+        <div class="d-flex flex-column w-100 text-center p-4 mb-4">
           <h3>Project's GitHub Link</h3>
           <div class="d-flex justify-content-center mt-3 flex-wrap">
             <a
