@@ -29,7 +29,7 @@ onUnmounted(() => {
   <div class="container position-sticky z-index-sticky top-0">
     <div class="row">
       <div class="col-12">
-        <NavbarDefault transparent dark :sticky="true" />
+        <NavbarDefault  dark :sticky="true" />
       </div>
     </div>
   </div>
@@ -85,12 +85,12 @@ onUnmounted(() => {
       loading="lazy"
     >
       <span class="mask bg-gradient-dark"></span>
-      <div class="container" style="width: 100rem; height: 30rem">
+      <div  id="scroll1" class="container" style="width: 100rem; height: 30rem">
         <div class="row">
           <div class="d-flex justify-content-center p-5">
             <div class="col-lg-8 ms-lg-5 text-center">
               <h3 class="text-white" style="fontFamily: 'Bebas Neue'">About the Project</h3>
-              <p id="scroll1" class="about-project text-white font text-justify " style="fontFamily: 'Bebas Neue'; text-align-last: center;" >
+              <p  class="about-project text-white font text-justify " style="fontFamily: 'Bebas Neue'; text-align-last: center;" >
                 We need to remain impartial right? Impartial will obtain and
                 categorize news from various sources so that people can view the
                 articles they want from the perspective they choose. But
@@ -113,7 +113,7 @@ onUnmounted(() => {
     class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6"
     style="padding-top: 50px"
   >
-    <div class="container" style="padding-bottom: 50px">
+    <div id="scroll2" class="container" style="padding-bottom: 50px">
       <div class="row">
         <div class="col-lg-4" style="" >
           <FilledInfoCard
@@ -178,8 +178,8 @@ onUnmounted(() => {
       </div>
     </div>
     <div>
-      <AboutTeam id="scroll2"></AboutTeam>
+      <AboutTeam  id="scroll3"></AboutTeam>
     </div>
   </div>
-  <DefaultFooter id="scroll3"/>
+  <DefaultFooter/>
 </template>

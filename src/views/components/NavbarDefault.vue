@@ -59,7 +59,7 @@ const getTextColor = () => {
   } else if (props.transparent) {
     color = "text-white";
   } else {
-    color = "text-dark";
+    color = "text-white";
   }
 
   return color;
@@ -75,6 +75,22 @@ if (type.value === "mobile") {
   textDark.value = true;
 } else if (type.value === "desktop" && textDark.value == false) {
   textDark.value = false;
+}
+
+function scroll(id) {
+  const { type } = useWindowsWidth();
+
+  if (type.value === "mobile" && id === "scroll3") {
+    document.getElementById(id).scrollIntoView({ block: "start" });
+
+  } else {
+    document.getElementById(id).scrollIntoView({ block: "center" });
+
+  }
+
+  const nav = document.getElementById("navigation");
+  nav.classList.remove("show");
+
 }
 
 </script>
@@ -118,15 +134,12 @@ if (type.value === "mobile") {
         class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0"
         id="navigation"
       >
-        <ul class="navbar-nav navbar-nav-hover ms-auto" style="margin-right: 100%">
-          <li class="nav-item dropdown dropdown-hover mx-2">
+        <ul class="navbar-nav navbar-nav-hover ms-auto " style="margin-right: 100%">
+          <li class="nav-item mx-2">
             <a
-              role="button"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
               :class="getTextColor()"
               id="dropdownMenuPages"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
               @click="scroll('scroll1')"
             >
               <i
@@ -147,14 +160,11 @@ if (type.value === "mobile") {
               />
             </a>
           </li>
-          <li class="nav-item dropdown dropdown-hover mx-2">
+          <li class="nav-item mx-2">
             <a
-              role="button"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
               :class="getTextColor()"
               id="dropdownMenuDocs"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
               @click="scroll('scroll2')"
             >
               <i
@@ -175,14 +185,11 @@ if (type.value === "mobile") {
               />
             </a>
           </li>
-          <li class="nav-item dropdown dropdown-hover mx-2">
+          <li class="nav-item mx-2">
             <a
-              role="button"
               class="nav-link ps-2 d-flex cursor-pointer align-items-center"
               :class="getTextColor()"
               id="dropdownMenuBlocks"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
               @click="scroll('scroll3')"
             >
               <i
@@ -212,18 +219,7 @@ if (type.value === "mobile") {
     </div>
   </nav>
   <!-- End Navbar -->
+
 </template>
 
-<script>
-export default {
-  methods: {
-    scroll(id) {
-      const elmt = document.getElementById(id);
-      window.scrollTo({
-        top: elmt.offsetTop + 400,
-        behavior: "smooth"
-      })
-    }
-  }
-}
-</script>
+
