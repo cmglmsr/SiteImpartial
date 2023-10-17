@@ -41,13 +41,12 @@ onUnmounted(() => {
     >
       <div class="container">
         <div class="row">
-          <div class="col-lg-7 text-center mx-auto position-relative">
-            <h1
+          <div class="col-xl-12 col-lg-10 col-md-7 text-center mx-auto position-relative">
+            <h1 class="main-heading"
               :style="{
                 display: 'inline-block',
                 color: 'white',
                 fontWeight: 'bold',
-                fontSize: '8vw',
                 fontFamily: 'Abril Fatface',
               }"
             >

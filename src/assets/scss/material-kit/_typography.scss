@@ -7,6 +7,16 @@ body {
   line-height: $p-line-height;
 }
 
+.main-heading {
+  font-size: 10vw;
+  @media (min-width: 600px) {
+    font-size: 9vw;
+  }
+  @media (min-width: 800px) {
+    font-size: 7vw;
+  }
+}
+
 h1, .h1 {
   font-size: $h1-font-size;
   line-height: $h1-line-height;
