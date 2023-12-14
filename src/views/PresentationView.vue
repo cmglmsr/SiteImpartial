@@ -7,6 +7,7 @@ import DefaultFooter from "./components/FooterDefault.vue";
 import Header from "./components/Header.vue";
 import FilledInfoCard from "./components/FilledInfoCard.vue";
 import AboutTeam from "./components/AboutTeam.vue";
+import a from "../../public/documents/"
 
 //images
 import github from "@/assets/img/unnamed.png";
@@ -23,6 +24,30 @@ onUnmounted(() => {
   body.classList.remove("presentation-page");
   body.classList.remove("bg-gray-200");
 });
+
+const download_Project_Specification_Report = () => {
+    const moduleUrl = import.meta.url;
+    const pdfPath = new URL('../../public/documents/T2324_Project_Specification_Report.pdf', moduleUrl).href;
+    const link = document.createElement('a');
+    link.href = pdfPath;
+    link.target = '_blank';
+    link.download = 'T2324_Project_Specification_Report.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+};
+
+const download_Analysis_and_Requirements_Report = () => {
+    const moduleUrl = import.meta.url;
+    const pdfPath = new URL('../../public/documents/T2324_Analysis_and_Requirements_Report.pdf', moduleUrl).href;
+    const link = document.createElement('a');
+    link.href = pdfPath;
+    link.target = '_blank';
+    link.download = 'T2324_Analysis_and_Requirements_Report.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 </script>
 
 <template>
@@ -122,8 +147,8 @@ onUnmounted(() => {
             :icon="{ component: 'receipt_long' }"
             title="Project Specification Document"
             :action="{
-              route: '',
-              label: { text: 'Click to download!', color: 'black' },
+              method: download_Project_Specification_Report,
+              label: { text: 'Click to download!', color: 'black'}
             }"
           />
         </div>
@@ -134,8 +159,8 @@ onUnmounted(() => {
             :icon="{ component: 'receipt_long' }"
             title="Analysis and Requirement Report"
             :action="{
-              route: '',
-              label: { text: 'Click to download!', color: 'black' },
+              method: download_Analysis_and_Requirements_Report,
+              label: { text: 'Click to download!', color: 'black'}
             }"
           />
         </div>
