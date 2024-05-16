@@ -26,30 +26,24 @@ defineProps({
   },
   icon: {
     type: Object,
-    required: true,
     component: String,
     color: String,
   },
   title: {
     type: String,
-    required: true,
   },
   description: {
     type: String,
-    required: false,
   },
   action: {
     type: Object,
-    required: true,
     label: {
       type: Object,
-      required: true,
       text: String,
       color: String,
     },
     route: {
       type: String,
-      required: true,
     },
   },
 });
